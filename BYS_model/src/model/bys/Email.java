@@ -12,13 +12,21 @@ public class Email {
 
     private String Content;
 
+    static Integer count;
+
+    static{
+        count = 0;
+    }
+
     public Email() {
+        count++;
     }
 
     public Email(Integer type_id, Integer step_id, String title) {
         Type_id = type_id;
         Step_id = step_id;
         Title = title;
+        Id = ++count;
     }
 
     public Integer getId() {

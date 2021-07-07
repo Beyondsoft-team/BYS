@@ -18,16 +18,25 @@ public class Process {
 
     private String Status;
 
+    static Integer count;
+
+    static{
+        count = 0;
+    }
+
     public Process() {
+        count++;
     }
 
     public Process(Integer type_id) {
         Type_id = type_id;
+        Id = ++count;
     }
 
     public Process(Integer type_id, String title) {
         Type_id = type_id;
         Title = title;
+        Id = ++count;
     }
 
     public Integer getId() {
