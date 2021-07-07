@@ -16,4 +16,13 @@ public class CheckingPassword {
             throw new PasswordFormatException(false);
         }
     }
+    
+    char[] pswchar = psw.toCharArray();
+        for (char c : pswchar) {
+            if ( 57< c || c <65 || 90< c || c <97 || c < 48 || c > 122){
+            throw new PasswordFormatException(false);
+            }
+            
+        }
+        
 }
